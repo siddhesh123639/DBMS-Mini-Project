@@ -1,0 +1,204 @@
+/* src/App.css */
+
+/* --- Global Styles & Body --- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5; /* A softer background color */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- Main App Container --- */
+.App {
+  width: 100%;
+  max-width: 700px; /* --- UPDATED: Made the container wider for a bigger box --- */
+  padding: 20px;
+}
+
+/* --- Card Styling for Login & Dashboard --- */
+.home-container, .login-container, .dashboard {
+  background: white;
+  padding: 3rem; /* --- UPDATED: Increased padding for more internal space --- */
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* A more pronounced shadow */
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+/* --- Typography --- */
+h2 {
+  font-size: 2rem; /* Bigger heading */
+  margin-bottom: 2rem;
+  color: #1a202c;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --- Form Elements --- */
+input {
+  display: block;
+  width: calc(100% - 32px); /* Account for padding */
+  padding: 16px; /* Taller input fields */
+  margin: 1rem auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem; /* Bigger text inside input */
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* --- Buttons & Links --- */
+button, .login-link {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  padding: 16px 24px; /* Bigger button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1.5rem 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover, .login-link:hover {
+  transform: translateY(-2px); /* Add a subtle lift effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* --- Dashboard Specifics --- */
+.dashboard {
+  text-align: left; /* Better for reading details */
+  padding: 3rem; /* --- UPDATED: Ensured dashboard itself has ample padding --- */
+}
+
+.dashboard p {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px; /* --- UPDATED: More space below each line --- */
+  margin-bottom: 12px; /* --- UPDATED: More space between lines --- */
+  font-size: 1.2rem; /* --- UPDATED: Made dashboard text bigger --- */
+}
+
+/* --- Error Message --- */
+.error {
+  color: #d9534f;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* src/App.css */
+
+/* --- Add these styles at the end of the file --- */
+
+/* Style for the new textarea and select dropdown */
+textarea, select {
+  display: block;
+  width: calc(100% - 32px);
+  padding: 16px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit; /* Use the same font as the body */
+  background-color: white;
+  transition: border-color 0.3s;
+}
+
+textarea:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+textarea {
+  min-height: 80px; /* Give the textarea some height */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Style for the secondary registration button */
+.login-link.secondary {
+  background: #6c757d; /* A different color for the secondary action */
+}
+
+.login-link.secondary:hover {
+  background: #5a6268;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Success message styling */
+.success {
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* src/App.css */
+
+/* --- Add these styles at the end of the file --- */
+
+.doctor-info {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f2f5;
+}
+
+.patient-list-container h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.patient-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.patient-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-info strong {
+  font-size: 1.1rem;
+}
+
+.patient-info small {
+  color: #666;
+  margin-top: 4px;
+}
+
+.delete-btn {
+  background: #dc3545; /* Red color for delete */
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: translateY(0); /* Override the main button hover effect */
+  box-shadow: none;
+}
